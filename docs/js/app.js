@@ -92,6 +92,9 @@ App = {
           return dappTokenInstance.balanceOf.call(App.account);
         }).then(function(balance) {
           $('.dapp-balance').html(balance.toNumber());
+          App.loading = false;
+          loader.hide();
+          content.show();
         });
     });
 
