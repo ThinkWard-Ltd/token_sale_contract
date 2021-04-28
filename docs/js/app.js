@@ -14,15 +14,23 @@ App = {
   },
 
   initWeb3: function() {
-   if (window.web3) {
-    window.web3 = new Web3(window.web3.currentProvider);
-    App.web3Provider = window.web3.currentProvider;
-    window.ethereum.enable();
-   } else {
-      $('#message').html("Please use a DAPP Browser or download a DAPP extension like metamask.");
-      App.userMessage = true;
-   }
-    return App.initContracts();
+     if(window.ethereum) {
+          window.web3 = new Web3(window.ethereum);
+          App.web3Provider = window.web3.currentProvider;
+          try {
+              await window.ethereum.enable();
+          } catch(error) {
+              //user denied access
+            }
+        } else if(window.web3) {
+          window.web3 = new Web3(window.web3.currentProvider || "http://localhost:8545");
+          App.web3Provider = window.web3.currentProvider;
+        } else {
+          //no dapp browser
+          $('#message').html("Please use a DAPP Browser or download a DAPP extension like metamask.");
+          App.userMessage = true;
+        }
+      return App.initContracts();
   },
 
   initContracts: function() {
