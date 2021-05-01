@@ -367,15 +367,21 @@
               In more detail, the smart contract to store an institution's certificates has the following variables:
               <ul class="ul" style="list-style-type: square;  margin: 0 auto; font-size: 17px; padding-top: 15px;">
                 <li><b>contractOwner:</b> address of the sender account</li>
+                <br />
                 <li><b>lastId:</b> states the last certificate ID index of the smart contract</li>
+                <br />
                 <li><b>Certificate:</b> a structure that allows the storing of the following variables in a single certificate:
-                  <ul class="ul" style="list-style-type: square;  margin: 0 auto; font-size: 17px; padding-top: 15px;">
+                  <ul class="ul" style="list-style-type: square;  margin: 0 auto; font-size: 17px; padding-top: 3px;">
                     <li><b>sendToAccount:</b> refers to the certificate recipient</li>
+                    <br />
                     <li><b>ipfsHash:</b> represents the hash of the image in the IPFS</li>
+                    <br />
                     <li><b>description:</b> optional parameter referring to a description that can be shown in the certificate</li>
+                    <br />
                     <li><b>active:</b> represents the current validity of the certificate as "true" or "false"</li>
                   </ul>
                 </li>
+                <br />
                 <li><b>certificates:</b> mapping the stores all the emitted certificates</li>
               </ul>
             </li>
