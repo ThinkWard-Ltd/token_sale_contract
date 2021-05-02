@@ -71,7 +71,7 @@
                 <p style="text-align: justify; padding-top: 25px; margin: 0 auto; font-size: 17px;">
                   <a href="#project-outline" style="font-color: light-blue;"><b>Project outline - Makerland</b></a>
                 </p>
-                <ul class="ul" style="font-size: 17px; margin: 0 auto;">
+                <ol class="ul" style="font-size: 17px; margin: 0 auto;">
                   <a href="#basic-services" style="padding-left: 10%;"><li style="font-color: light-blue;">Basic services: courses and certificates</li></a>
                   <a href="#target-users" style="padding-left: 10%;"><li style="font-color: light-blue;">Target users and focus on topics</li></a>
                   <a href="#committee" style="padding-left: 10%;"><li style="font-color: light-blue;">Committee and voting procedures</li></a>
@@ -81,7 +81,7 @@
                   <a href="#blockchain" style="padding-left: 10%;"><li style="font-color: light-blue; ">Rewards, cryptocurrency (MKL) and the blockchain</li></a>
                   <a href="#revenue-stream" style="padding-left: 10%;"><li style="font-color: light-blue; ">Revenue stream</li></a>
                   <a href="#further-developments" style="padding-left: 10%;"><li style="font-color: light-blue; ">Further developments and areas of expansion</li></a>
-                </ul>
+                </ol>
                 <br />
               </p>
             <h3 style=" padding-top: 80px; margin: 0 auto;" id="analysis">MARKET ANALYSIS: E-LEARNING AND MOOCs</h3>
@@ -362,13 +362,17 @@
               In addition to the rewarding system, Makerland also employs smart contracts which allow the storing of course certificates and of various voting procedures on the blockchain. 
               Voting procedures, as described in the previous points, include those to take decisions in the commitee (point 3) and to manage a project's finances (point 5).
               For what concerns course certificates, they can easily be stored on the ethereum blockchain by creating a smart contract for each educational institution. 
-              These smart contracts allow the insertion of a reference to an image. This reference can be obtained by hashing the desired image using the IPFS server. 
-              The hash allows the storing of the certificate on the blockchain, as well as the possibility of retrieving an image file that can be viewed in the browser.
+              Unfortunately, as a consequence of elevated costs, it is not feasible to store the actual images of the certificates on the blockchain.
+              However, the smart contracts allow the insertion of a reference to an image of the certificate. 
+              This reference can be obtained by hashing the desired picture using a system known as IPFS.
+              The IPFS, commonly named "Interplanetary File System", is a decentralized protocol used for storing information like images, videos and other data.
+              In this system, each file is given a unique hash that can be used anytime to retrieve and display the piece of data in the browser.
+              Therefore, by providing the image of a certificate as an input, it is possible to obtain a unique hash that serves as a reference to the picture.
+              The hash obtained is stored on the blockchain. 
+              <br />
               In more detail, the smart contract to store an institution's certificates has the following variables:
               <ul class="ul" style="list-style-type: square;  margin: 0 auto; font-size: 17px; padding-top: 15px;">
                 <li><b>contractOwner:</b> address of the sender account</li>
-                <br />
-                <li><b>lastId:</b> states the last certificate ID index of the smart contract</li>
                 <br />
                 <li><b>Certificate:</b> a structure that allows the storing of the following variables in a single certificate:
                   <ul class="ul" style="list-style-type: square;  margin: 0 auto; font-size: 17px; padding-top: 10px;">
@@ -390,6 +394,7 @@
                Makerland’s platform has a wide revenue stream. Its main points are resumed below:
                <ul class="ul" style="list-style-type: square;  margin: 0 auto; font-size: 17px; padding-top: 15px;">
                 <li>Rise in the value of Makerland tokens</li>
+                <li>Adverisement spaces in the social network section</li>
                 <li>Sponsoring of user posts (paid with Makerland’s currency)</li>
                 <li>Fees taken from selling course certificates</li>
                 <li>Monthly subscription to services for project-development (paid with Makerland’s currency)</li>
